@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 729828e062de5954e8fa8e3d57de1dde
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: pr_0
+    21300002: pr_1
+    21300004: pr_2
+    21300006: pr_3
+    21300008: pr_4
+    21300010: pr_5
+    21300012: pr_6
+    21300014: pr_7
+    21300016: pr_8
+    21300018: pr_9
+    21300020: pr_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: pr_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2248
+        width: 1251
+        height: 1112
+      alignment: 9
+      pivot: {x: .810249388, y: .0290858857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_1
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2248
+        width: 1294
+        height: 1112
+      alignment: 9
+      pivot: {x: .86555171, y: .0290858857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_2
+      rect:
+        serializedVersion: 2
+        x: 3425
+        y: 2248
+        width: 1343
+        height: 1218
+      alignment: 9
+      pivot: {x: .867266059, y: .0265546031}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_3
+      rect:
+        serializedVersion: 2
+        x: 5212
+        y: 2248
+        width: 1459
+        height: 1441
+      alignment: 9
+      pivot: {x: .85469234, y: .0252508502}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_4
+      rect:
+        serializedVersion: 2
+        x: 6806
+        y: 2248
+        width: 1488
+        height: 1682
+      alignment: 9
+      pivot: {x: .82060945, y: .0144218598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_5
+      rect:
+        serializedVersion: 2
+        x: 8565
+        y: 2238
+        width: 1328
+        height: 1881
+      alignment: 9
+      pivot: {x: .828793466, y: .0150454743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_6
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 0
+        width: 560
+        height: 1271
+      alignment: 9
+      pivot: {x: .637171149, y: .155864596}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_7
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 44
+        width: 1130
+        height: 1227
+      alignment: 9
+      pivot: {x: .689624429, y: .118619174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_8
+      rect:
+        serializedVersion: 2
+        x: 3647
+        y: 150
+        width: 1246
+        height: 1121
+      alignment: 9
+      pivot: {x: .762823462, y: .0432785526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_9
+      rect:
+        serializedVersion: 2
+        x: 5492
+        y: 160
+        width: 1247
+        height: 1111
+      alignment: 9
+      pivot: {x: .772339165, y: .0363900848}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_10
+      rect:
+        serializedVersion: 2
+        x: 7086
+        y: 160
+        width: 1237
+        height: 1111
+      alignment: 9
+      pivot: {x: .764735699, y: .0363900848}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
