@@ -40,6 +40,6 @@ public class PlanetBehaviour : MonoBehaviour {
     }
     void OnMouseDown()
     {
-        this.lamp.isLighted = !this.lamp.isLighted;
+        this.lamp.Switch();
     }
 }

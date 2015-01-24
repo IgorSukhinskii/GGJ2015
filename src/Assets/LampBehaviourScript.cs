@@ -37,4 +37,8 @@ public class LampBehaviourScript : MonoBehaviour {
             GetComponent<SpriteRenderer>().color = Color.grey;
         }
 	}
+    public void Switch()
+    {
+        this.isLighted = !this.isLighted;
+    }
 }
