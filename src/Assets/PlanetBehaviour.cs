@@ -7,15 +7,12 @@ public class PlanetBehaviour : MonoBehaviour {
     public float selfRotationSpeed;
     public float planetRadius;
     public float orbitalPosition;
-
+    public int hitPoints;
+    public int maxHitPoints;
+    public LampBehaviourScript lamp;
 	// Use this for initialization
 	void Start () {
 		this.transform.position = new Vector3(0, orbitRadius, 0);
-        // посчитать x через радиус орбиты и текущий орбитальный угол, центр вращения -- 0;0
-
-		float rad = orbitalSpeed * Mathf.Deg2Rad;
-		Debug.Log(orbitalSpeed + "degrees are equal to " + rad + " radians.");
-
 	}
 
 
@@ -35,4 +32,14 @@ public class PlanetBehaviour : MonoBehaviour {
 		this.transform.position = new Vector3(newX, newY, 0);
 
 	}
+    public void Damage(int damage)
+    {
+        this.hitPoints -= damage;
+        if (this.hitPoints > this.maxHitPoints) this.hitPoints = this.maxHitPoints;
+        if (this.hitPoints <= 0) Debug.Log("Planet dieded =(");
+    }
+    void OnMouseDown()
+    {
+        this.lamp.isLighted = !this.lamp.isLighted;
+    }
 }
