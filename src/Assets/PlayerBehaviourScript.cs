@@ -1,26 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerBehaviourScript : MonoBehaviour {
-
+    List<GameObject> planets;
 	// Use this for initialization
 	void Start () {
-	
+        planets = new List<GameObject>();
+        foreach (Transform child in GameObject.Find("Planets").transform)
+        {
+            planets.Add(child.gameObject);
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        var currentPlanet = GetComponent<LamplighterBehaviourScript>().planet;
+        var index = planets.FindIndex(0, o => o.Equals(currentPlanet.gameObject));
+        if (Input.GetKeyUp(KeyCode.LeftArrow) && index <= (planets.Count - 1))
         {
-            // move out
+            index--;
+            if (index < 0) index = planets.Count - 1;
+            GetComponent<LamplighterBehaviourScript>().planet = planets[index].GetComponent<PlanetBehaviour>();
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKeyUp(KeyCode.RightArrow) && index >= 0)
         {
-            //move in
+            index++;
+            if (index > (planets.Count - 1))
+            {
+                index = 0;
+            }
+            GetComponent<LamplighterBehaviourScript>().planet = planets[index].GetComponent<PlanetBehaviour>();
         }
-        else if (Input.GetKey(KeyCode.Space))
+        else if (Input.GetKeyUp(KeyCode.Space))
         {
             GetComponent<LamplighterBehaviourScript>().planet.lamp.Switch();
+            Debug.Log(planets.Count);
         }
 	}
 }
