@@ -2,10 +2,12 @@
 using System.Collections;
 
 public class LampBehaviourScript : MonoBehaviour {
-
+    public bool isLighted;
+    private const float damageTickLength = 1;
+    private float damageTickTimer = damageTickLength;
 	// Use this for initialization
 	void Start () {
-	
+        GetComponent<LamplighterBehaviourScript>().planet.lamp = this;
 	}
 	
 	// Update is called once per frame
@@ -17,13 +19,22 @@ public class LampBehaviourScript : MonoBehaviour {
         var headPosition = new Vector2(headPosition3.x, headPosition3.y);
         var hit = Physics2D.Raycast(headPosition, Vector2.zero - headPosition,
             Vector2.Distance(headPosition, Vector2.zero) + 0.01f);
-        if (hit.collider != null)
+        damageTickTimer -= Time.deltaTime;
+        if (damageTickTimer < 0)
         {
-            GetComponent<SpriteRenderer>().color = Color.red;
+            damageTickTimer = damageTickLength;
+            if ((hit.collider != null) != this.isLighted)
+            {
+                onPlanet.planet.Damage(10);
+            }
+        }
+        if (this.isLighted)
+        {
+            GetComponent<SpriteRenderer>().color = Color.white;
         }
         else
         {
-            GetComponent<SpriteRenderer>().color = Color.white;
+            GetComponent<SpriteRenderer>().color = Color.grey;
         }
 	}
 }
