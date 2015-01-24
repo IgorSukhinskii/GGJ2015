@@ -1,7 +1,18 @@
 fileFormatVersion: 2
 guid: 60ca23d8654ea1d4681f01a65f0324cf
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: pr_blow_0
+    21300002: pr_blow_1
+    21300004: pr_blow_2
+    21300006: pr_blow_3
+    21300008: pr_blow_4
+    21300010: pr_blow_5
+    21300012: pr_blow_6
+    21300014: pr_blow_7
+    21300016: pr_blow_8
+    21300018: pr_blow_9
+    21300020: pr_blow_10
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +36,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +53,116 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: pr_blow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2090
+        width: 975
+        height: 1119
+      alignment: 9
+      pivot: {x: .761543453, y: .0262364987}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_blow_1
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 2095
+        width: 1045
+        height: 1110
+      alignment: 9
+      pivot: {x: .837138116, y: .0193722285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_blow_2
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 2095
+        width: 1166
+        height: 1110
+      alignment: 9
+      pivot: {x: .853949487, y: .0254178979}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_blow_3
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 2095
+        width: 1194
+        height: 1110
+      alignment: 9
+      pivot: {x: .82878828, y: .0314635672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_blow_4
+      rect:
+        serializedVersion: 2
+        x: 6917
+        y: 2095
+        width: 1092
+        height: 1204
+      alignment: 9
+      pivot: {x: .770392895, y: .0234545339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_blow_5
+      rect:
+        serializedVersion: 2
+        x: 8427
+        y: 2076
+        width: 1124
+        height: 1386
+      alignment: 9
+      pivot: {x: .777620912, y: .0255095251}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_blow_6
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 5
+        width: 541
+        height: 1110
+      alignment: 9
+      pivot: {x: .442455471, y: .0385694765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_blow_7
+      rect:
+        serializedVersion: 2
+        x: 1985
+        y: 0
+        width: 802
+        height: 1115
+      alignment: 9
+      pivot: {x: .638062119, y: .0305552427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_blow_8
+      rect:
+        serializedVersion: 2
+        x: 3764
+        y: 2
+        width: 867
+        height: 1110
+      alignment: 9
+      pivot: {x: .647061646, y: .0284405332}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_blow_9
+      rect:
+        serializedVersion: 2
+        x: 5461
+        y: 5
+        width: 951
+        height: 1110
+      alignment: 9
+      pivot: {x: .768144429, y: .0284405407}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pr_blow_10
+      rect:
+        serializedVersion: 2
+        x: 7093
+        y: 5
+        width: 952
+        height: 1110
+      alignment: 9
+      pivot: {x: .711470425, y: .0314633586}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
