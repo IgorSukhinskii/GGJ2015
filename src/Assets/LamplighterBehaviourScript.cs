@@ -5,6 +5,7 @@ public class LamplighterBehaviourScript : MonoBehaviour {
     public PlanetBehaviour planet;
     public float height;
     public float angle;
+	
 	// Use this for initialization
 	void Start () {
 	}

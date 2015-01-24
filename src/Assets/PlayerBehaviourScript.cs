@@ -1,9 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+ 
 
 public class PlayerBehaviourScript : MonoBehaviour {
     List<GameObject> planets;
+
+	public int score;
+	public int streak;
+
+	public void increaseScore(){
+		if (streak == 0) {
+						score += 100;
+						++streak;
+				}
+		else
+			score += (int)Mathf.Pow(20, streak++);
+	}
+
+	public void breakStreak(){
+		streak = 0;
+	}
+
+
 	// Use this for initialization
 	void Start () {
         planets = new List<GameObject>();
