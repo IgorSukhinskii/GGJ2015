@@ -56,5 +56,9 @@ public class PlayerBehaviourScript : MonoBehaviour {
             GetComponent<LamplighterBehaviourScript>().planet.lamp.Switch();
             Debug.Log(planets.Count);
         }
+        
+        GameObject.Find("Main Camera").transform.position =
+            new Vector3(this.transform.position.x, this.transform.position.y, -5);
+        GameObject.Find("Main Camera").transform.rotation = this.transform.rotation;
 	}
 }
