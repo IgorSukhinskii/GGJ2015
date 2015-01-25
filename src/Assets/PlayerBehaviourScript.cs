@@ -73,6 +73,7 @@ public class PlayerBehaviourScript : MonoBehaviour {
             lamp.Switch();
             if (lamp.isLighted == lamp.onDarkSide)
             {
+                GetComponent<LamplighterBehaviourScript>().planet.halo.color = new Color(1, 0.3f, 0, 0);
                 this.increaseScore();
                 GameObject.Find("ScoreText").GetComponent<Text>().text = "Score: " + score;
             }

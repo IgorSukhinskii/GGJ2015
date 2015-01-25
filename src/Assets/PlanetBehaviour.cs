@@ -42,7 +42,7 @@ public class PlanetBehaviour : MonoBehaviour {
     public void Damage(int damage)
     {
 
-		this.halo.color = new Color (1, 0.3f, 0, 1);
+		this.halo.color = new Color (1, 0.3f, 0, 0.8f);
         if (hitPoints <= 0)
         {
             return;
