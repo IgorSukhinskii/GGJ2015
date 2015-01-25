@@ -10,6 +10,7 @@ public class PlanetBehaviour : MonoBehaviour {
     public int hitPoints;
     public int maxHitPoints;
     public LampBehaviourScript lamp;
+	public SpriteRenderer halo;
 	// Use this for initialization
 	void Start () {
 		this.transform.position = new Vector3(0, orbitRadius, 0);
@@ -24,7 +25,7 @@ public class PlanetBehaviour : MonoBehaviour {
 		this.transform.Rotate(0, 0, selfRotationCurrentSpeed);
 
 		float orbitalCurrentSpeed = orbitalSpeed * Time.deltaTime * difficulty;
-		float newX = Mathf.Cos (orbitalCurrentSpeed * Mathf.Deg2Rad)* this.transform.position.x
+		float newX =  Mathf.Cos (orbitalCurrentSpeed * Mathf.Deg2Rad)* this.transform.position.x
 					- Mathf.Sin (orbitalCurrentSpeed * Mathf.Deg2Rad)* this.transform.position.y;
 
 		float newY = Mathf.Sin (orbitalCurrentSpeed * Mathf.Deg2Rad)* this.transform.position.x
@@ -40,6 +41,7 @@ public class PlanetBehaviour : MonoBehaviour {
 
     public void Damage(int damage)
     {
+		this.halo.color = new Color (1, 0.3f, 0, 1);
         this.hitPoints -= damage;
         if (this.hitPoints > this.maxHitPoints) this.hitPoints = this.maxHitPoints;
         if (damage > 0)

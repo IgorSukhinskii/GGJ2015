@@ -73,13 +73,14 @@ public class PlayerBehaviourScript : MonoBehaviour {
             if (lamp.isLighted == lamp.onDarkSide)
             {
                 this.increaseScore();
+				this.GetComponent<LamplighterBehaviourScript>().planet.halo.color = new Color (1, 0.3f, 0, 0);
             }
             Debug.Log(planets.Count);
         }
         
-        GameObject.Find("Main Camera").transform.position =
-            new Vector3(this.transform.position.x, this.transform.position.y, -5);
-        GameObject.Find("Main Camera").transform.rotation = this.transform.rotation;
+//        GameObject.Find("Main Camera").transform.position =
+//            new Vector3(this.transform.position.x, this.transform.position.y, -5);
+//        GameObject.Find("Main Camera").transform.rotation = this.transform.rotation;
         UpdateDifficulty(Time.deltaTime);
 	}
 }
