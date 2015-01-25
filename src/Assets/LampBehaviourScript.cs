@@ -20,7 +20,7 @@ public class LampBehaviourScript : MonoBehaviour {
         var headPosition = new Vector2(headPosition3.x, headPosition3.y);
         var hit = Physics2D.Raycast(headPosition, Vector2.zero - headPosition,
             Vector2.Distance(headPosition, Vector2.zero) + 0.01f);
-        onDarkSide = hit.collider == GetComponent<Collider>();
+        onDarkSide = hit.collider == onPlanet.planet.GetComponent<CircleCollider2D>();
         damageTickTimer -= Time.deltaTime;
         if (damageTickTimer < 0)
         {
