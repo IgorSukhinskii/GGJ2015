@@ -53,6 +53,16 @@ public class PlayerBehaviourScript : MonoBehaviour {
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
+
+            var lamp = GetComponent<LamplighterBehaviourScript>().planet.lamp;
+            if (lamp.isLighted)
+            {
+                GetComponent<Animator>().SetTrigger("Blow");
+            }
+            else
+            {
+                GetComponent<Animator>().SetTrigger("Light");
+            }
             GetComponent<LamplighterBehaviourScript>().planet.lamp.Switch();
             Debug.Log(planets.Count);
         }
