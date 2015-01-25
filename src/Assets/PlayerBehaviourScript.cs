@@ -8,19 +8,23 @@ public class PlayerBehaviourScript : MonoBehaviour {
 
 	public int score;
 	public int streak;
+    public float difficulty;
+    public int planetsLeft;
 
 	public void increaseScore(){
-		if (streak == 0) {
-						score += 100;
-						++streak;
-				}
-		else
-			score += (int)Mathf.Pow(20, streak++);
+		score += 10*(int)Mathf.Pow(2, streak);
+        streak++;
 	}
 
 	public void breakStreak(){
 		streak = 0;
 	}
+
+    void UpdateDifficulty(float dt)
+    {
+        if (difficulty < 2)
+            difficulty += dt / 100.0f;
+    }
 
 
 	// Use this for initialization
@@ -30,6 +34,8 @@ public class PlayerBehaviourScript : MonoBehaviour {
         {
             planets.Add(child.gameObject);
         }
+        planetsLeft = planets.Count;
+        DontDestroyOnLoad(this);
 	}
 	
 	// Update is called once per frame
@@ -63,12 +69,17 @@ public class PlayerBehaviourScript : MonoBehaviour {
             {
                 GetComponent<Animator>().SetTrigger("Light");
             }
-            GetComponent<LamplighterBehaviourScript>().planet.lamp.Switch();
+            lamp.Switch();
+            if (lamp.isLighted == lamp.onDarkSide)
+            {
+                this.increaseScore();
+            }
             Debug.Log(planets.Count);
         }
         
         GameObject.Find("Main Camera").transform.position =
             new Vector3(this.transform.position.x, this.transform.position.y, -5);
         GameObject.Find("Main Camera").transform.rotation = this.transform.rotation;
+        UpdateDifficulty(Time.deltaTime);
 	}
 }

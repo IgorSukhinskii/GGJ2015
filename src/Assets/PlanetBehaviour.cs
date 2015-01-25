@@ -19,10 +19,11 @@ public class PlanetBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float selfRotationCurrentSpeed = selfRotationSpeed * Time.deltaTime;
+        var difficulty = GameObject.Find("Lamplighter").GetComponent<PlayerBehaviourScript>().difficulty;
+        float selfRotationCurrentSpeed = selfRotationSpeed * Time.deltaTime * difficulty;
 		this.transform.Rotate(0, 0, selfRotationCurrentSpeed);
 
-		float orbitalCurrentSpeed = orbitalSpeed * Time.deltaTime;
+		float orbitalCurrentSpeed = orbitalSpeed * Time.deltaTime * difficulty;
 		float newX = Mathf.Cos (orbitalCurrentSpeed * Mathf.Deg2Rad)* this.transform.position.x
 					- Mathf.Sin (orbitalCurrentSpeed * Mathf.Deg2Rad)* this.transform.position.y;
 
@@ -41,7 +42,21 @@ public class PlanetBehaviour : MonoBehaviour {
     {
         this.hitPoints -= damage;
         if (this.hitPoints > this.maxHitPoints) this.hitPoints = this.maxHitPoints;
-        if (this.hitPoints <= 0) Debug.Log("Planet dieded =(");
+        if (damage > 0)
+        {
+            GameObject.Find("Lamplighter").GetComponent<PlayerBehaviourScript>().breakStreak();
+        }
+        if (this.hitPoints <= 0)
+        {
+            Debug.Log("Planet dieded =(");
+            var player = GameObject.Find("Lamplighter").GetComponent<PlayerBehaviourScript>();
+            player.planetsLeft--;
+            if (player.planetsLeft == 0)
+            {
+                Debug.Log("Gaym ova");
+                Application.LoadLevel(2);
+            }
+        }
 
 
 
