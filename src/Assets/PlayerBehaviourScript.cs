@@ -12,12 +12,8 @@ public class PlayerBehaviourScript : MonoBehaviour {
     public int planetsLeft;
 
 	public void increaseScore(){
-		if (streak == 0) {
-						score += 100;
-						++streak;
-				}
-		else
-			score += (int)Mathf.Pow(20, streak++);
+		score += 10*(int)Mathf.Pow(2, streak);
+        streak++;
 	}
 
 	public void breakStreak(){
@@ -73,7 +69,11 @@ public class PlayerBehaviourScript : MonoBehaviour {
             {
                 GetComponent<Animator>().SetTrigger("Light");
             }
-            GetComponent<LamplighterBehaviourScript>().planet.lamp.Switch();
+            lamp.Switch();
+            if (lamp.isLighted == lamp.onDarkSide)
+            {
+                this.increaseScore();
+            }
             Debug.Log(planets.Count);
         }
         

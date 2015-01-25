@@ -42,6 +42,10 @@ public class PlanetBehaviour : MonoBehaviour {
     {
         this.hitPoints -= damage;
         if (this.hitPoints > this.maxHitPoints) this.hitPoints = this.maxHitPoints;
+        if (damage > 0)
+        {
+            GameObject.Find("Lamplighter").GetComponent<PlayerBehaviourScript>().breakStreak();
+        }
         if (this.hitPoints <= 0)
         {
             Debug.Log("Planet dieded =(");

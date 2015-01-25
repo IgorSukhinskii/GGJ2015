@@ -5,6 +5,7 @@ public class LampBehaviourScript : MonoBehaviour {
     public bool isLighted;
     private const float damageTickLength = 1;
     private float damageTickTimer = damageTickLength;
+    public bool onDarkSide;
 	// Use this for initialization
 	void Start () {
         GetComponent<LamplighterBehaviourScript>().planet.lamp = this;
@@ -19,11 +20,12 @@ public class LampBehaviourScript : MonoBehaviour {
         var headPosition = new Vector2(headPosition3.x, headPosition3.y);
         var hit = Physics2D.Raycast(headPosition, Vector2.zero - headPosition,
             Vector2.Distance(headPosition, Vector2.zero) + 0.01f);
+        onDarkSide = hit.collider == this;
         damageTickTimer -= Time.deltaTime;
         if (damageTickTimer < 0)
         {
             damageTickTimer = damageTickLength;
-            if ((hit.collider != null) != this.isLighted)
+            if (onDarkSide != this.isLighted)
             {
                 onPlanet.planet.Damage(10);
             }
