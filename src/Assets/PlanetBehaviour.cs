@@ -64,7 +64,7 @@ public class PlanetBehaviour : MonoBehaviour {
             {
                 Debug.Log("Gaym ova");
                 GameObject.Find("HighScores").GetComponent<HighScoresScript>().score = player.score;
-                Application.LoadLevel(2);
+                Application.LoadLevel(1);
             }
         }
 

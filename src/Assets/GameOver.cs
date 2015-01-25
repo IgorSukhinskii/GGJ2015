@@ -14,7 +14,7 @@ public class GameOver : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            Application.LoadLevel(1);
+            Application.LoadLevel(0);
         }
 	}
 }
