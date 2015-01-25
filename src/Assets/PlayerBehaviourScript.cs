@@ -8,6 +8,8 @@ public class PlayerBehaviourScript : MonoBehaviour {
 
 	public int score;
 	public int streak;
+    public float difficulty;
+    public int planetsLeft;
 
 	public void increaseScore(){
 		if (streak == 0) {
@@ -22,6 +24,12 @@ public class PlayerBehaviourScript : MonoBehaviour {
 		streak = 0;
 	}
 
+    void UpdateDifficulty(float dt)
+    {
+        if (difficulty < 2)
+            difficulty += dt / 100.0f;
+    }
+
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +38,8 @@ public class PlayerBehaviourScript : MonoBehaviour {
         {
             planets.Add(child.gameObject);
         }
+        planetsLeft = planets.Count;
+        DontDestroyOnLoad(this);
 	}
 	
 	// Update is called once per frame
@@ -70,5 +80,6 @@ public class PlayerBehaviourScript : MonoBehaviour {
         GameObject.Find("Main Camera").transform.position =
             new Vector3(this.transform.position.x, this.transform.position.y, -5);
         GameObject.Find("Main Camera").transform.rotation = this.transform.rotation;
+        UpdateDifficulty(Time.deltaTime);
 	}
 }

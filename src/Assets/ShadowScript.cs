@@ -11,7 +11,8 @@ public class ShadowScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         var planet = GetComponentInParent<PlanetBehaviour>();
-        var rotationSpeed = (planet.orbitalSpeed - planet.selfRotationSpeed) * Time.deltaTime;
+        var difficulty = GameObject.Find("Lamplighter").GetComponent<PlayerBehaviourScript>().difficulty;
+        var rotationSpeed = (planet.orbitalSpeed - planet.selfRotationSpeed) * Time.deltaTime * difficulty;
         this.transform.Rotate(0, 0, rotationSpeed);
 	}
 }

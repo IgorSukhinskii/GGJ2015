@@ -23,9 +23,6 @@ public class LampBehaviourScript : MonoBehaviour {
         if (damageTickTimer < 0)
         {
             damageTickTimer = damageTickLength;
-			Debug.Log(onPlanet.planet.orbitRadius);
-			Debug.Log (hit.collider);
-			Debug.Log (this.isLighted);
             if ((hit.collider != null) != this.isLighted)
             {
                 onPlanet.planet.Damage(10);
