@@ -32,12 +32,24 @@ public class PlanetBehaviour : MonoBehaviour {
 		this.transform.position = new Vector3(newX, newY, 0);
 
 	}
+
+	public float getPercentageOfCurrentHP() {
+		return (float) hitPoints / (float) maxHitPoints;
+	}
+
     public void Damage(int damage)
     {
         this.hitPoints -= damage;
         if (this.hitPoints > this.maxHitPoints) this.hitPoints = this.maxHitPoints;
         if (this.hitPoints <= 0) Debug.Log("Planet dieded =(");
-    }
+
+
+
+		float currentPercentage = getPercentageOfCurrentHP ();
+		//Debug.Log(currentPercentage);
+		GetComponent<SpriteRenderer> ().color = new Color(currentPercentage,currentPercentage,currentPercentage,1);
+	}
+
     void OnMouseDown()
     {
         this.lamp.Switch();
