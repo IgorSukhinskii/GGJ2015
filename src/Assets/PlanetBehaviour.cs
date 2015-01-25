@@ -41,7 +41,13 @@ public class PlanetBehaviour : MonoBehaviour {
 
     public void Damage(int damage)
     {
+
 		this.halo.color = new Color (1, 0.3f, 0, 1);
+        if (hitPoints <= 0)
+        {
+            return;
+        }
+
         this.hitPoints -= damage;
         if (this.hitPoints > this.maxHitPoints) this.hitPoints = this.maxHitPoints;
         if (damage > 0)
@@ -53,9 +59,11 @@ public class PlanetBehaviour : MonoBehaviour {
             Debug.Log("Planet dieded =(");
             var player = GameObject.Find("Lamplighter").GetComponent<PlayerBehaviourScript>();
             player.planetsLeft--;
+            Debug.Log(player.planetsLeft);
             if (player.planetsLeft == 0)
             {
                 Debug.Log("Gaym ova");
+                GameObject.Find("HighScores").GetComponent<HighScoresScript>().score = player.score;
                 Application.LoadLevel(2);
             }
         }
