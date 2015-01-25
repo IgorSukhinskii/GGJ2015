@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: f3fbaadb1a801e34483a4f57067d1165
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Novoe_zazhiganie_0
+    21300002: Novoe_zazhiganie_1
+    21300004: Novoe_zazhiganie_2
+    21300006: Novoe_zazhiganie_3
+    21300008: Novoe_zazhiganie_4
+    21300010: Novoe_zazhiganie_5
+    21300012: Novoe_zazhiganie_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Novoe_zazhiganie_0
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1852
+        width: 966
+        height: 1113
+      alignment: 9
+      pivot: {x: .815141797, y: .0188082606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Novoe_zazhiganie_1
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 1852
+        width: 991
+        height: 1113
+      alignment: 9
+      pivot: {x: .767370701, y: .023873575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Novoe_zazhiganie_2
+      rect:
+        serializedVersion: 2
+        x: 5116
+        y: 1852
+        width: 1143
+        height: 1113
+      alignment: 9
+      pivot: {x: .776204884, y: .0441342853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Novoe_zazhiganie_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 944
+        height: 1113
+      alignment: 9
+      pivot: {x: .685131013, y: .0238737147}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Novoe_zazhiganie_4
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 0
+        width: 966
+        height: 1113
+      alignment: 9
+      pivot: {x: .640062928, y: .0289388895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Novoe_zazhiganie_5
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 0
+        width: 430
+        height: 1113
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Novoe_zazhiganie_6
+      rect:
+        serializedVersion: 2
+        x: 5785
+        y: 0
+        width: 679
+        height: 1107
+      alignment: 9
+      pivot: {x: .30073452, y: .0416634977}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
